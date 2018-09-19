@@ -1,0 +1,5 @@
+ base:
+     '*':
+      - init
+      - checkmk-install
+

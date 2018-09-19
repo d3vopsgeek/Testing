@@ -1,0 +1,21 @@
+{% load_yaml as lookup %}
+Debian:
+    repo_url: "deb https://artifacts.elastic.co/packages/6.x/apt stable main"
+    repo_file: /etc/apt/sources.list.d/beats.list
+    gpg_url: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+    package: filebeat
+    service: filebeat
+    config_file: /etc/filebeat/filebeat.yml
+CentOS:
+    repo_url: "https://artifacts.elastic.co/packages/6.x/yum"
+    repo_file: /etc/yum.repos.d/beats.repo
+    gpg_url: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+    package: filebeat
+    service: filebeat
+    config_file: /etc/filebeat/filebeat.yml
+{% endload %}
+
+{% load_yaml as rawmap %}
+hosts: localhost:5044
+{% endload %}
+
